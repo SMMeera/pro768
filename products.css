@@ -687,30 +687,55 @@ html, body {
 /* ===============================
    PRODUCT HERO – MOBILE FIX
 ================================ */
+/* =====================================
+   HERO SLIDER – MOBILE CINEMATIC LAYOUT
+===================================== */
 @media (max-width: 768px) {
 
-  /* Push content down slightly */
+  /* Lock hero height so layout is stable */
   .hero-slide {
-    padding-top: 140px;
-    padding-bottom: 120px;
+    min-height: 80vh;
   }
 
-  /* Move arrows upward so they don't hit text */
-  .hero-arrow {
-    top: 32%;
-    transform: translateY(-50%);
+  /* Create safe content zone */
+  .hero-slide.active {
+    justify-content: flex-end;     /* move content to bottom */
+    padding-bottom: 90px;          /* breathing room under button */
+    padding-top: 60px;
+  }
+
+  /* Title */
+  .hero-slide h1 {
     font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 6px;
   }
 
-  /* Give space between text & button */
-  .hero-btn {
-    margin-top: 24px;
-  }
-
-  /* Slightly tighten subtitle */
+  /* Subtitle */
   .hero-slide p {
-    margin-bottom: 10px;
-    line-height: 1.4;
+    font-size: 14.5px;
+    line-height: 1.45;
+    margin-bottom: 22px;
   }
 
+  /* Button — slightly lower like your reference */
+  .hero-btn {
+    margin-top: 10px;
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  /* Move arrows ABOVE the content zone */
+  .hero-arrow {
+    top: 42%;
+    font-size: 28px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(10,20,40,0.65);
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-arrow.left { left: 14px; }
+  .hero-arrow.right { right: 14px; }
 }
