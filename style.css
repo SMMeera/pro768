@@ -590,7 +590,20 @@ section, header, footer, main {
 }
 
 
+/* MOBILE – SMOOTH HORIZONTAL SCROLL */
+@media (max-width: 768px) {
+  .products-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    padding-bottom: 16px;
+  }
 
+  .product-card {
+    scroll-snap-align: center;
+  }
+}
 
 
 
