@@ -1,0 +1,684 @@
+/* =========================
+   HERO SLIDER
+========================= */
+
+body {
+  background:
+    radial-gradient(circle at top left, #1b335f 0%, #050a14 55%),
+    radial-gradient(circle at bottom right, #7a3a10 0%, #050a14 60%);
+  background-attachment: fixed;
+}
+
+
+
+.product-hero {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(249,115,22,0.07), transparent 45%),
+    linear-gradient(180deg, #05080f 0%, #0b1e2d 50%, #05080f 100%);
+}
+
+/* Slider container becomes a premium glass stage */
+.hero-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(15,25,45,0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(100,150,255,0.15);
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.6),
+    inset 0 0 60px rgba(80,120,255,0.08);
+}
+
+/* Slides */
+.hero-slide {
+  display: none;
+  min-height: 420px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-slide.active {
+  display: flex;
+}
+
+/* Soft cinematic vignette instead of dark sheet */
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,0.15), rgba(5,8,15,0.9));
+  z-index: 1;
+}
+
+/* Subtle image softening */
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5,8,15,0.25),
+    rgba(5,8,15,0.6)
+  );
+  z-index: 1;
+}
+
+/* Content layer */
+.hero-slide h1,
+.hero-slide p,
+.hero-btn {
+  position: relative;
+  z-index: 3;
+}
+
+/* Product images */
+.hero-slide:nth-child(1) { background-image: url("VIN-SAVER-OG.webp"); }
+.hero-slide:nth-child(2) { background-image: url("vin-tools.png"); }
+.hero-slide:nth-child(3) { background-image: url("drill.png"); }
+.hero-slide:nth-child(4) { background-image: url("USED-OG.webp"); }
+
+.hero-slide h1 {
+  font-size: 42px;
+  color: #ffffff;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+.hero-slide p {
+  font-size: 18px;
+  color: #cbd5e1;
+  margin-top: 10px;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.hero-btn {
+  margin-top: 26px;
+  padding: 14px 34px;
+  background: linear-gradient(135deg, #f97316, #ff9f4a);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 15px 40px rgba(249,115,22,0.5);
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 20px 60px rgba(249,115,22,0.7);
+}
+
+/* Arrows */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10,20,40,0.6);
+  border: 1px solid rgba(120,180,255,0.2);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 34px;
+  cursor: pointer;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.hero-arrow.left { left: 24px; }
+.hero-arrow.right { right: 24px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-slide {
+    min-height: 520px;
+    padding: 120px 20px 80px;
+  }
+
+  .hero-slide h1 {
+    font-size: 30px;
+  }
+
+  .hero-slide p {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    padding: 12px 28px;
+    border-radius: 22px;
+    font-size: 15px;
+  }
+}
+
+
+
+/* =========================
+   PRODUCT DETAILS SECTION
+========================= */
+
+.product-details-section {
+  position: relative;
+  padding: 120px 0 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  background: transparent;
+}
+
+/* Soft divider under hero */
+.product-details-section::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f97316, transparent);
+  opacity: 0.7;
+}
+
+/* =========================
+   PRODUCT ROW
+========================= */
+
+.product-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Alternate sides */
+.product-row.right {
+  direction: rtl;
+}
+.product-row.right > * {
+  direction: ltr;
+}
+
+/* FORCE image to match text height */
+.product-row {
+  align-items: stretch;   /* override center */
+}
+
+.product-image {
+  height: 100%;
+  display: flex;
+}
+
+.product-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-row {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  display: block;
+  border-radius: 22px;
+  box-shadow: 0 40px 120px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   PLUS BUTTON
+========================= */
+
+.expand-btn {
+  position: absolute;
+  bottom: -18px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f97316, #ff9f4a);
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(249,115,22,0.45);
+  transition: transform 0.3s ease;
+}
+
+.expand-btn:hover {
+  transform: scale(1.08);
+}
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info h3 {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.product-info p {
+  font-size: 15.5px;
+  color: #cbd5e1;
+  max-width: 480px;
+}
+
+/* =========================
+   EXPAND CONTENT (HIDDEN)
+========================= */
+
+.product-expand {
+  margin-top: 26px;
+  padding: 28px 30px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.45);
+
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* ACTIVE (ONLY ON + CLICK) */
+.product-row.active .product-expand {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.product-row.active .expand-btn {
+  transform: rotate(45deg);
+}
+
+/* =========================
+   REVEAL SAFETY (IMPORTANT)
+========================= */
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .hero-slide h1 {
+    font-size: 30px;
+  }
+
+  .product-details-section {
+    gap: 80px;
+    padding-top: 80px;
+  }
+
+  .product-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding: 0 32px;
+  }
+
+  .product-row.right {
+    direction: ltr;
+  }
+
+  .product-info p {
+    margin: 0 auto;
+  }
+
+  .expand-btn {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* =========================
+   GLOBAL SAFETY
+========================= */
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact-section {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 10, 20, 0) 0%,
+    rgba(5, 10, 20, 0.6) 40%,
+    rgba(5, 10, 20, 0.9) 100%
+  );
+  padding: 110px 0;
+  color: #ffffff;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.contact-left h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  max-width: 420px;
+}
+
+.contact-left p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 420px;
+}
+
+/* SOCIALS */
+.contact-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.contact-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-socials a:hover {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+/* RIGHT SIDE */
+.contact-right h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-right .accent-line {
+  margin-bottom: 32px;
+}
+
+/* DETAILS */
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-details span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.contact-details a,
+.contact-details p {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-right h2 {
+    font-size: 28px;
+  }
+}
+
+
+
+/* ================================
+   CONTACT SECTION (MOBILE FRIENDLY)
+================================ */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 90px 0;
+    text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-left h3 {
+    font-size: 22px;
+    margin: 0 auto 12px;
+  }
+
+  .contact-left p {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 14.5px;
+  }
+
+  .contact-socials {
+    justify-content: center;
+  }
+
+  .contact-right h2 {
+    font-size: 26px;
+  }
+
+  .contact-details li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .contact-details span {
+    font-size: 13px;
+  }
+
+  .contact-details a,
+  .contact-details p {
+    font-size: 14px;
+  }
+}
+
+/* ================================
+   CONTACT WIDTH ALIGN FIX (PRODUCT PAGE)
+================================ */
+
+.contact-section .contact-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+@media (max-width: 900px) {
+  .contact-section .contact-grid {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 72px 0;
+  }
+
+  .contact-left h3 {
+    font-size: 20px;
+  }
+
+  .contact-right h2 {
+    font-size: 22px;
+  }
+}
+
+
+/* ================================
+   REVEAL EFFECTS (NON-INTRUSIVE)
+================================ */
+
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left { transform: translateX(-50px); }
+.reveal-right { transform: translateX(50px); }
+.reveal-scale { transform: scale(0.9); }
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* =====================================
+   PRODUCT PAGE TEXTURE OVERLAY
+   (SUBTLE INDUSTRIAL FEEL)
+===================================== */
+
+
+
+/* ================================
+   REVEAL ANIMATIONS – PRODUCT PAGE
+================================ */
+
+/* Base hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
+}
+
+/* Direction variants */
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal-up {
+  transform: translateY(60px);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+/* When visible */
+.reveal-visible{
+  opacity: 1;
+  transform: none;
+}
+
+/* Optional delays */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.6s; }
+
+/* Mobile safety (no jank) */
+@media (max-width: 768px) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    transform: translateY(30px);
+  }
+
+}
+
+.hero p {
+  margin-bottom: 28px;   /* creates space before the button */
+}
+
+@media (max-width: 768px) {
+  .hero p {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-right .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
