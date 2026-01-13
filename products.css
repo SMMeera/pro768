@@ -682,3 +682,35 @@ html, body {
     margin-right: auto;
   }
 }
+
+
+/* ===============================
+   PRODUCT HERO – MOBILE FIX
+================================ */
+@media (max-width: 768px) {
+
+  /* Push content down slightly */
+  .hero-slide {
+    padding-top: 140px;
+    padding-bottom: 120px;
+  }
+
+  /* Move arrows upward so they don't hit text */
+  .hero-arrow {
+    top: 32%;
+    transform: translateY(-50%);
+    font-size: 28px;
+  }
+
+  /* Give space between text & button */
+  .hero-btn {
+    margin-top: 24px;
+  }
+
+  /* Slightly tighten subtitle */
+  .hero-slide p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+}
