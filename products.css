@@ -695,47 +695,24 @@ html, body {
 ===================================== */
 @media (max-width: 768px) {
 
-  /* Lock height */
+  /* Let the image define the height */
   .hero-slide {
-    min-height: 80vh;
-    position: relative;
+    min-height: auto;
+    height: 75vh;               /* stable cinematic size */
+    background-position: center 35%;
   }
 
-  /* Force layer separation */
-  .hero-slide::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 38%;
-    width: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(11,30,45,0.95),
-      rgba(11,30,45,0.75),
-      rgba(11,30,45,0)
-    );
-    z-index: 1;
-  }
-
-  /* CONTENT ZONE */
+  /* Center content naturally */
   .hero-slide.active {
-    justify-content: flex-end;
-    padding-bottom: 80px;
-    padding-top: 60px;
-  }
-
-  .hero-slide h1,
-  .hero-slide p,
-  .hero-btn {
-    position: relative;
-    z-index: 2;   /* Always above gradient */
+    justify-content: center;
+    padding: 0 20px;
+    padding-top: 40px;
   }
 
   /* Title */
   .hero-slide h1 {
     font-size: 28px;
-    line-height: 1.15;
+    line-height: 1.1;
     margin-bottom: 6px;
   }
 
@@ -743,28 +720,28 @@ html, body {
   .hero-slide p {
     font-size: 14.5px;
     line-height: 1.45;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
   }
 
   /* Button */
   .hero-btn {
-    margin-top: 6px;
-    padding: 12px 30px;
+    margin-top: 10px;
+    padding: 12px 32px;
     font-size: 14px;
   }
 
-  /* ARROWS – FLOAT IN IMAGE ZONE */
+  /* Move arrows away from text */
   .hero-arrow {
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 26px;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: rgba(10,20,40,0.65);
+    background: rgba(10,20,40,0.6);
     backdrop-filter: blur(6px);
-    z-index: 3;   /* above image, below text */
   }
 
-  .hero-arrow.left { left: 14px; }
-  .hero-arrow.right { right: 14px; }
+  .hero-arrow.left { left: 12px; }
+  .hero-arrow.right { right: 12px; }
 }
