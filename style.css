@@ -1356,7 +1356,33 @@ section.who-we-are.section {
   }
 }
 
+.industries-title {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+  max-width: 640px;
+}
 
+.industries-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 520px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .industries-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .industries-text {
+    font-size: 14.5px;
+  }
+}
 
 
 
