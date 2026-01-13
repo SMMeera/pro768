@@ -1495,38 +1495,30 @@ section.who-we-are.section {
    INDUSTRIES LEFT TEXT – SCALE FIX
    (Do NOT touch cards)
 ================================ */
+/* ===============================
+   MOBILE FIX — INDUSTRIES TEXT
+   Match Global Presence scale
+================================ */
 
-/* Orange tag */
-.industries-content .section-tag,
-.industries-content .industries-tag {
-  font-size: 11px;          /* was too large */
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-/* Main heading */
-.industries-content h2 {
-  font-size: 32px;         /* was 42px */
-  line-height: 1.2;
-  max-width: 520px;
-}
-
-/* Paragraph under heading */
-.industries-content p {
-  font-size: 15px;         /* was ~17–18 visually */
-  line-height: 1.65;
-  max-width: 540px;
-  color: #cbd5e1;
-}
-
-/* Mobile balance */
 @media (max-width: 768px) {
+
+  .industries-content .section-tag {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    margin-bottom: 8px;
+  }
+
   .industries-content h2 {
-    font-size: 24px;
+    font-size: 26px;   /* same visual weight as Global */
+    line-height: 1.25;
   }
 
   .industries-content p {
-    font-size: 14px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    max-width: 95%;
   }
+
 }
+
 
