@@ -591,13 +591,23 @@ section, header, footer, main {
 
 
 /* MOBILE – SMOOTH HORIZONTAL SCROLL */
+/* FORCE MOBILE TO TREAT PRODUCT STRIP AS A SWIPE GALLERY */
 @media (max-width: 768px) {
   .products-scroll {
+    position: relative;
+    z-index: 10;
+    will-change: transform;
+    transform: translateZ(0);
+    pointer-events: auto;
+
+    overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    overscroll-behavior-x: contain;
     touch-action: pan-x;
-    padding-bottom: 16px;
+    scroll-snap-type: x proximity;
+
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .product-card {
