@@ -1482,3 +1482,51 @@ section.who-we-are.section {
     background: linear-gradient(to bottom, rgba(7,20,40,0.9), rgba(80,30,10,0.85));
   }
 }
+
+
+
+
+
+
+
+
+
+/* ===============================
+   INDUSTRIES LEFT TEXT – SCALE FIX
+   (Do NOT touch cards)
+================================ */
+
+/* Orange tag */
+.industries-content .section-tag,
+.industries-content .industries-tag {
+  font-size: 11px;          /* was too large */
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Main heading */
+.industries-content h2 {
+  font-size: 32px;         /* was 42px */
+  line-height: 1.2;
+  max-width: 520px;
+}
+
+/* Paragraph under heading */
+.industries-content p {
+  font-size: 15px;         /* was ~17–18 visually */
+  line-height: 1.65;
+  max-width: 540px;
+  color: #cbd5e1;
+}
+
+/* Mobile balance */
+@media (max-width: 768px) {
+  .industries-content h2 {
+    font-size: 24px;
+  }
+
+  .industries-content p {
+    font-size: 14px;
+  }
+}
+
