@@ -139,29 +139,55 @@ body {
 .hero-arrow.left { left: 24px; }
 .hero-arrow.right { right: 24px; }
 
-/* Mobile */
+
+
+
+/* ===============================
+   MOBILE — MATCH REFERENCE HERO
+=============================== */
 @media (max-width: 768px) {
+
+  /* Keep same logic as reference */
   .hero-slide {
-    min-height: 520px;
-    padding: 120px 20px 80px;
+    min-height: 420px;     /* EXACTLY same as desktop */
+    background-position: center;
+  }
+
+  .hero-slide.active {
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-slide h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .hero-slide p {
-    font-size: 16px;
+    font-size: 15px;
+    margin-top: 8px;
   }
 
   .hero-btn {
-    padding: 12px 28px;
-    border-radius: 22px;
-    font-size: 15px;
+    margin-top: 22px;
+    padding: 12px 30px;
+    font-size: 14px;
   }
+
+  /* Arrows behave exactly like reference */
+  .hero-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10,20,40,0.6);
+    backdrop-filter: blur(6px);
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+  }
+
+  .hero-arrow.left { left: 16px; }
+  .hero-arrow.right { right: 16px; }
 }
-
-
+/* Mobile */
 
 /* =========================
    PRODUCT DETAILS SECTION
@@ -731,17 +757,5 @@ html, body {
   }
 
   /* Move arrows away from text */
-  .hero-arrow {
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 26px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(10,20,40,0.6);
-    backdrop-filter: blur(6px);
-  }
-
-  .hero-arrow.left { left: 12px; }
-  .hero-arrow.right { right: 12px; }
+ 
 }
