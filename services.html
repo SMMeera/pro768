@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | VINDRU</title>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================== -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">
+      <img src="Vindru-LOGO-New.png" alt="VINDRU">
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay">
+  <nav class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</div>
+<!-- =========================
+     SERVICES SECTION
+========================== -->
+<section class="services-section full-width">
+  <div class="container">
+
+    <h1 class="services-title reveal fade-up">
+      Drilling Consulting Services
+    </h1>
+
+    <div class="accent-line reveal scale-in"></div>
+
+    <!-- SERVICE 1 -->
+    <div class="service-row">
+
+      <div class="service-circle reveal zoom-in">
+        <img src="op-support.webp" alt="Operational Support">
+      </div>
+
+      <div class="service-box reveal fade-right">
+        <h2>Operational Support</h2>
+        <ul>
+          <li>Rig Pre-Delivery Inspection at Factory (India).</li>
+          <li>Service Engineers and site supervisors on site.</li>
+          <li>Efficient Crew Deployment.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SERVICE 2 -->
+    <div class="service-row">
+
+      <div class="service-circle reveal zoom-in">
+        <img src="dig-support.webp" alt="Digital Support">
+      </div>
+
+      <div class="service-box reveal fade-left">
+        <h2>Digital Support</h2>
+        <ul>
+          <li>Real-Time Analytics & Reporting.</li>
+          <li>Team Training & Onboarding.</li>
+          <li>End-to-End Project Assistance.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     CONTACT SECTION
+========================== -->
+<section class="contact-section full-width fade-up">
+  <div class="container contact-grid">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h3>“Victory in Drilling, For You.”</h3>
+      <p>
+        Your success is our purpose — every tool, every system,
+        every solution we engineer.
+      </p>
+
+      <div class="contact-socials">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="X">x</a>
+        <a href="#" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-right">
+      <h2>Contact Us</h2>
+      
+
+      <ul class="contact-details">
+        <li>
+          <span>Email</span>
+          <a href="mailto:sales@vindru.com">sales@vindru.com</a>
+        </li>
+        <li>
+          <span>Call Us</span>
+          <a href="tel:+919446632422">+91 94466 32422</a>
+        </li>
+        <li>
+          <span>Location</span>
+          <p>Coimbatore, Tamil Nadu, India</p>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     REVEAL SCRIPT
+========================== -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+<script>
+const toggle = document.getElementById("menuToggle");
+const overlay = document.getElementById("menuOverlay");
+
+toggle.addEventListener("click", () => {
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  overlay.classList.remove("active");
+});
+</script>
+
+</body>
+</html>

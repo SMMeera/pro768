@@ -1,0 +1,556 @@
+/* ================================
+   SERVICES SECTION
+================================ */
+/* ================================
+   GLOBAL FLUID LAYOUT SYSTEM
+   (Same as Home & About)
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Master width controller */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+/* Full-bleed section */
+.full-width {
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+body {
+  background:
+    radial-gradient(circle at top left, #1b335f 0%, #050a14 55%),
+    radial-gradient(circle at bottom right, #7a3a10 0%, #050a14 60%);
+  background-attachment: fixed;
+}
+
+.services-section {
+  background: transparent;
+  padding: min(12vh, 140px) 0;
+  color: #ffffff;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.accent-line {
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #ff9f4a);
+  margin: 0 auto 80px;
+}
+
+/* ================================
+   SERVICE ROW
+================================ */
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 140px;
+}
+
+.service-row {
+  width: 100%;
+}
+
+/* 🔥 FORCE OPPOSITE SIDES */
+.service-row:nth-child(odd) {
+  flex-direction: row;
+}
+
+.service-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* ================================
+   IMAGE CIRCLE (PERFECT)
+================================ */
+.service-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.55);
+}
+
+.service-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================================
+   TEXT BOX
+================================ */
+.service-box {
+  flex: 1;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 26px;
+  padding: 46px 54px;
+  box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+}
+
+.service-box h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.service-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-box li {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.service-box li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #f97316, #ff9f4a);
+  border-radius: 50%;
+}
+
+/* ================================
+   MOBILE
+================================ */
+@media (max-width: 1000px) {
+  .service-row,
+  .service-row:nth-child(even),
+  .service-row:nth-child(odd) {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .service-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .service-box {
+    padding: 36px 30px;
+  }
+}
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact-section {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 10, 20, 0) 0%,
+    rgba(5, 10, 20, 0.6) 40%,
+    rgba(5, 10, 20, 0.9) 100%
+  );
+  padding: 110px 0;
+  color: #ffffff;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.contact-left h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  max-width: 420px;
+}
+
+.contact-left p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 420px;
+}
+
+/* SOCIALS */
+.contact-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.contact-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-socials a:hover {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+/* RIGHT SIDE */
+.contact-right h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-right .accent-line {
+  margin-bottom: 32px;
+}
+
+/* DETAILS */
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-details span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.contact-details a,
+.contact-details p {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.contact-right {
+  text-align: right;   /* aligns both title & line */
+}
+
+.contact-right .accent-line {
+  margin-left: auto;   /* pushes line to the right */
+  margin-right: 0;
+}
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-right h2 {
+    font-size: 28px;
+  }
+}
+
+
+
+/* ================================
+   CONTACT SECTION (MOBILE FRIENDLY)
+================================ */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 90px 0;
+    text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-left h3 {
+    font-size: 22px;
+    margin: 0 auto 12px;
+  }
+
+  .contact-left p {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 14.5px;
+  }
+
+  .contact-socials {
+    justify-content: center;
+  }
+
+  .contact-right h2 {
+    font-size: 26px;
+  }
+
+  .contact-details li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .contact-details span {
+    font-size: 13px;
+  }
+
+  .contact-details a,
+  .contact-details p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 72px 0;
+  }
+
+  .contact-left h3 {
+    font-size: 20px;
+  }
+
+  .contact-right h2 {
+    font-size: 22px;
+  }
+}
+
+
+
+
+/* ================================
+   SERVICES – MOBILE REFINEMENT
+================================ */
+@media (max-width: 900px) {
+
+  .services-section {
+    padding: 90px 0;
+  }
+
+  .services-title {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .accent-line {
+    margin-bottom: 60px;
+  }
+
+  .service-row,
+  .service-row:nth-child(even),
+  .service-row:nth-child(odd) {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+    margin-bottom: 90px;
+  }
+
+  /* IMAGE CIRCLE – MORE HERO FEEL */
+  .service-circle {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+  }
+
+  /* TEXT CARD – MOBILE FRIENDLY */
+  .service-box {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 32px 26px;
+    border-radius: 22px;
+  }
+
+  .service-box h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .service-box ul {
+    text-align: left; /* 🔥 readability improvement */
+  }
+
+  .service-box li {
+    font-size: 14.5px;
+    line-height: 1.75;
+    padding-left: 20px;
+  }
+
+  .service-box li::before {
+    top: 9px;
+    width: 7px;
+    height: 7px;
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  .services-section {
+    padding: 70px 0;
+  }
+
+  .services-title {
+    font-size: 26px;
+  }
+
+  .service-row {
+    margin-bottom: 70px;
+  }
+
+  .service-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .service-box {
+    padding: 28px 22px;
+  }
+
+  .service-box h2 {
+    font-size: 20px;
+  }
+
+  .service-box li {
+    font-size: 14px;
+  }
+}
+
+
+
+/* ================================
+   REVEAL ANIMATIONS (SERVICES)
+================================ */
+
+/* BASE */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(.2,.8,.2,1);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* VARIANTS */
+.fade-up {
+  transform: translateY(50px);
+}
+
+.fade-left {
+  transform: translateX(-60px);
+}
+
+.fade-right {
+  transform: translateX(60px);
+}
+
+.zoom-in {
+  transform: scale(0.88);
+}
+
+.scale-in {
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+/* ACTIVE STATES */
+.reveal.active.fade-left,
+.reveal.active.fade-right,
+.reveal.active.fade-up {
+  transform: translate(0, 0);
+}
+
+.reveal.active.zoom-in {
+  transform: scale(1);
+}
+
+.reveal.active.scale-in {
+  transform: scaleX(1);
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-right {
+    text-align: center;
+  }
+
+  .contact-right .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
