@@ -690,18 +690,46 @@ html, body {
 /* =====================================
    HERO SLIDER – MOBILE CINEMATIC LAYOUT
 ===================================== */
+/* =====================================
+   HERO SLIDER – TRUE MOBILE CINEMATIC FIX
+===================================== */
 @media (max-width: 768px) {
 
-  /* Lock hero height so layout is stable */
+  /* Lock height */
   .hero-slide {
     min-height: 80vh;
+    position: relative;
   }
 
-  /* Create safe content zone */
+  /* Force layer separation */
+  .hero-slide::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 38%;
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(11,30,45,0.95),
+      rgba(11,30,45,0.75),
+      rgba(11,30,45,0)
+    );
+    z-index: 1;
+  }
+
+  /* CONTENT ZONE */
   .hero-slide.active {
-    justify-content: flex-end;     /* move content to bottom */
-    padding-bottom: 90px;          /* breathing room under button */
+    justify-content: flex-end;
+    padding-bottom: 80px;
     padding-top: 60px;
+  }
+
+  .hero-slide h1,
+  .hero-slide p,
+  .hero-btn {
+    position: relative;
+    z-index: 2;   /* Always above gradient */
   }
 
   /* Title */
@@ -718,22 +746,23 @@ html, body {
     margin-bottom: 22px;
   }
 
-  /* Button — slightly lower like your reference */
+  /* Button */
   .hero-btn {
-    margin-top: 10px;
+    margin-top: 6px;
     padding: 12px 30px;
     font-size: 14px;
   }
 
-  /* Move arrows ABOVE the content zone */
+  /* ARROWS – FLOAT IN IMAGE ZONE */
   .hero-arrow {
-    top: 42%;
-    font-size: 28px;
-    width: 42px;
-    height: 42px;
+    top: 30%;
+    font-size: 26px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: rgba(10,20,40,0.65);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
+    z-index: 3;   /* above image, below text */
   }
 
   .hero-arrow.left { left: 14px; }
