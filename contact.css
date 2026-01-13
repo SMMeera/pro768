@@ -1,0 +1,567 @@
+/* =================================================
+   CONTACT PAGE (ZOHO FORM EMBED SAFE)
+================================================= */
+
+
+
+
+
+
+
+
+body {
+  background:
+    radial-gradient(circle at top left, #1b335f 0%, #050a14 55%),
+    radial-gradient(circle at bottom right, #7a3a10 0%, #050a14 60%);
+  background-attachment: fixed;
+}
+
+
+.contact-page {
+  background: transparent;
+  padding: min(10vh, 120px) 0;
+  color: #ffffff;
+}
+/* 🔒 HARD-LOCK header alignment across all devices */
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* locks center */
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Prevent any inherited margins from pushing line */
+.contact-header .accent-line {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact-info h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.contact-info p {
+  margin: 20px 0 30px;
+  color: #cbd5e1;
+  max-width: 420px;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  margin-bottom: 14px;
+  font-size: 15.5px;
+}
+
+/* Zoho iframe wrapper */
+.contact-form {
+  background: rgba(255,255,255,0.06);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.45);
+}
+
+.contact-form iframe {
+  width: 100%;
+  min-height: 640px;
+  border: none;
+}
+
+.contact-header {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 60px;   /* center horizontally */
+  text-align: center;   /* center text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* center accent line perfectly */
+}
+.contact-header h1,
+.contact-header p {
+  text-align: center;
+}
+
+
+
+/* ================================
+   CUSTOM CONTACT FORM
+================================ */
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 14.5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f97316;
+}
+
+/* Button uses your theme */
+.primary-btn {
+  margin-top: 10px;
+  padding: 14px;
+  background: linear-gradient(90deg, #f97316, #ff9f4a);
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+#form-status {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.form-group select {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 14.5px;
+}
+
+.form-group select option {
+  color: #0f172a;
+}
+
+/* Terms checkbox */
+.form-group.terms {
+  margin-top: 8px;
+}
+
+.form-group.terms .checkbox {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.form-group.terms input {
+  accent-color: #f97316;
+  transform: translateY(3px);
+}
+
+
+/* MOBILE */
+
+
+
+
+
+/* =================================================
+   LEGAL DISCLAIMER SECTION
+================================================= */
+/* =================================================
+   LEGAL DISCLAIMER SECTION (WORKING WITH YOUR HTML)
+================================================= */
+
+.legal-section {
+  background: transparent;
+  padding: min(10vh, 120px) 0;
+  color: #ffffff;
+}
+
+
+
+/* ================================
+   HEADING (FORCED ABOVE EVERYTHING)
+================================ */
+
+.legal-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.legal-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0;
+  
+}
+
+.legal-heading .accent-line {
+    display: block;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #ff9f4a);
+  margin: 16px auto 0;
+}
+
+@media (max-width: 768px) {
+  .legal-heading h2 {
+    font-size: 30px;
+  }
+
+  .legal-heading .accent-line {
+    width: 56px;
+    margin-top: 14px;
+  }
+}
+
+/* ================================
+   ACCORDION
+================================ */
+
+.legal-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* RECTANGULAR ITEMS */
+.legal-accordion details {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* OPEN STATE */
+.legal-accordion details[open] {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(249,115,22,0.45);
+}
+
+/* SUMMARY BAR */
+.legal-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 26px;
+  font-size: 17px;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legal-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.legal-accordion summary::after {
+  content: "+";
+  font-size: 22px;
+  color: #f97316;
+  transition: transform 0.3s ease;
+}
+
+.legal-accordion details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+/* CONTENT PANEL */
+.legal-panel {
+  padding: 0 26px 26px;
+}
+
+.legal-panel p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .legal-heading h2 {
+    font-size: 30px;
+  }
+
+  .legal-panel {
+    padding: 0 20px 20px;
+  }
+
+  .legal-panel p {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-heading h2 {
+    font-size: 26px;
+  }
+}
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact-section {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 10, 20, 0) 0%,
+    rgba(5, 10, 20, 0.6) 40%,
+    rgba(5, 10, 20, 0.9) 100%
+  );
+  padding: 110px 0;
+  color: #ffffff;
+}
+
+/* GRID */
+
+
+/* LEFT SIDE */
+.contact-left h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  max-width: 420px;
+}
+
+.contact-left p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 420px;
+}
+
+/* SOCIALS */
+.contact-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.contact-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-socials a:hover {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+/* RIGHT SIDE */
+.contact-right h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-right .accent-line {
+  margin-bottom: 32px;
+}
+
+/* DETAILS */
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-details span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.contact-details a,
+.contact-details p {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+
+
+
+
+/* ================================
+   CONTACT SECTION (MOBILE FRIENDLY)
+================================ */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 90px 0;
+    text-align: center;
+  }
+
+  .contact-grid {
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+  .contact-left h3 {
+    font-size: 22px;
+    margin: 0 auto 12px;
+  }
+
+  .contact-left p {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 14.5px;
+  }
+
+  .contact-socials {
+    justify-content: center;
+  }
+
+  .contact-right h2 {
+    font-size: 26px;
+  }
+
+  .contact-details li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .contact-details span {
+    font-size: 13px;
+  }
+
+  .contact-details a,
+  .contact-details p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 72px 0;
+  }
+
+  .contact-left h3 {
+    font-size: 20px;
+  }
+
+  .contact-right h2 {
+    font-size: 22px;
+  }
+}
+
+
+/* ================================
+   REVEAL EFFECTS (NON-INTRUSIVE)
+================================ */
+
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left { transform: translateX(-50px); }
+.reveal-right { transform: translateX(50px); }
+.reveal-scale { transform: scale(0.9); }
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+
+/* MOBILE – CENTER ALL HERO & CONTACT HEADINGS */
+@media (max-width: 768px) {
+
+  /* Contact page hero */
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Footer contact section */
+  .contact-right {
+    text-align: center;
+  }
+
+  .contact-right .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.accent-line {
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #ff9f4a);
+  border-radius: 2px;
+  margin: 20px auto;
+  display: block;
+}

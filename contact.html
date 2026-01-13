@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | VINDRU</title>
+
+  <!-- Global CSS -->
+     
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+
+</head>
+<body>
+
+  <!-- =========================
+       NAVBAR (reuse existing)
+  ========================== -->
+  <header class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">
+      <img src="Vindru-LOGO-New.png" alt="VINDRU">
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay">
+  <nav class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</div>
+
+  <section class="contact-page full-width">
+  <div class="container contact-grid">
+
+    <!-- LEFT INFO -->
+    <div class="contact-header reveal-left">
+      <h2 class="reveal-up">Get in touch with us</h2>
+      <div class="accent-line reveal-scale"></div>
+
+      <p class="reveal-up delay-1">
+        We’re expanding our global network! Join us as a dealer or agent and become part of a dynamic, results-driven team committed to success. Let’s grow together.
+
+
+      </p>
+
+      
+    </div>
+
+    <!-- RIGHT FORM (ZOHO EMBED) -->
+    <div class="contact-form reveal-right">
+  <form id="vindru-contact-form" class="custom-form">
+
+    <div class="form-group reveal-up delay-1">
+  <label>Your Name *</label>
+  <input type="text" name="name" required>
+</div>
+
+<div class="form-group reveal-up delay-1">
+  <label>Company Name</label>
+  <input type="text" name="company">
+</div>
+
+<div class="form-group reveal-up delay-1">
+  <label>Country *</label>
+  <select name="country" required>
+    <option value="">Select</option>
+    <option>India</option>
+    <option>UAE</option>
+    <option>Saudi Arabia</option>
+    <option>Qatar</option>
+    <option>Oman</option>
+    <option>Other</option>
+  </select>
+</div>
+
+<div class="form-group reveal-up delay-1">
+  <label>City *</label>
+  <input type="text" name="city" required>
+</div>
+
+<div class="form-group reveal-up delay-1">
+  <label>Phone *</label>
+  <input type="tel" name="phone" required>
+</div>
+
+<div class="form-group reveal-up delay-1">
+  <label>Email *</label>
+  <input type="email" name="email" required>
+</div>
+
+<div class="form-group reveal-up delay-1">
+  <label>Requirement</label>
+  <textarea name="requirement" rows="4"></textarea>
+</div>
+
+<div class="form-group terms reveal-up delay-1">
+  <label class="checkbox">
+    <input type="checkbox" required>
+    <span>
+      By submitting this request, you hereby authorize Vindru to contact you through the collected information.
+    </span>
+  </label>
+</div>
+
+<button type="submit" class="primary-btn">
+  Send Enquiry
+</button>
+
+<p id="form-status"></p>
+
+  </form>
+</div>
+
+  </div>
+</section>
+
+
+<section class="legal-section">
+
+  <div class="legal-wrapper container">
+     
+    <!-- RIGHT : STICKY HEADING -->
+    <div class="legal-heading reveal-up">
+      <h2>Legal Disclaimer</h2>
+      <span class="accent-line"></span>
+    </div>
+
+    <!-- LEFT : ACCORDION -->
+    <div class="legal-accordion">
+
+      <details>
+        <summary>Legal Disclaimer</summary>
+        <div class="legal-panel">
+          <p>
+            VINDRU (Vindru Drilling Solutions Corp) provides access to information and materials (the “Information”) on www.vindru.com, subject to the Terms of Use and this Disclaimer. By accessing or using this Website, you acknowledge and agree to be bound by the Terms of Use and this Disclaimer. If you do not agree with these terms, you are advised not to access or use the Website.<br><br>
+
+            VINDRU reserves the right to modify the Terms of Use and/or this Disclaimer at any time, at its sole discretion and without prior notice, by posting the updated terms on the Website. Continued use of the Website following the posting of any changes constitutes your acceptance of those changes, regardless of whether you have reviewed them.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Copyright</summary>
+        <div class="legal-panel">
+          <p>
+            © Vindru Drilling Solutions Corp. 2025. All rights reserved.<br><br>
+            Except as expressly permitted in this Website, no part of the information or content may be reproduced, distributed, or transmitted in any form or by any means without the prior written consent of VINDRU.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Trademarks</summary>
+        <div class="legal-panel">
+          <p>
+            VINDRU, including the VINDRU name, logos, graphics, service marks, and "vindru.com," are trademarks of VINDRU. Except as expressly permitted herein, these trademarks may not be used without prior written authorization from VINDRU.<br><br>
+
+            All other trademarks appearing on this Website that are not owned by VINDRU are the property of their respective owners. These owners may not be affiliated with, connected to, or sponsored by VINDRU.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Website Access and Use</summary>
+        <div class="legal-panel">
+          <p>
+            Subject to the terms and conditions outlined in the Terms of Use and this Disclaimer, VINDRU grants you a limited, non-exclusive, non-transferable, and restricted right to access, use, and display this Website and its contents.<br><br>
+
+            By accessing the Website, you agree not to disrupt or attempt to disrupt its operation in any manner. Your use of the Website must at all times comply with the Terms of Use and this Disclaimer.<br><br>
+
+            Unless expressly stated otherwise on the Website, you may not copy, print, reproduce, or otherwise use the information and materials available on this Website without prior written permission from VINDRU.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Third-Party Links</summary>
+        <div class="legal-panel">
+          <p>
+            This Website may contain links to third-party websites that are not under the control of VINDRU. VINDRU assumes no responsibility or liability for the content, accuracy, or functionality of any external websites accessible through such links, and makes no representations or warranties in this regard.<br><br>
+
+            These links are provided solely for your convenience. Access to any such third-party websites is at your own risk, and the inclusion of any link does not imply endorsement or acceptance by VINDRU of the linked site, its content, or its use.<br><br>
+
+            VINDRU is committed to maintaining the integrity of its Website and the links it provides. We welcome feedback regarding both our site and any third-party links included herein.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Indemnification</summary>
+        <div class="legal-panel">
+          <p>
+            By accepting this Disclaimer, you agree to indemnify, defend, and hold harmless VINDRU, its officers, employees, agents, subsidiaries, affiliates, and partners from and against any and all direct, indirect, incidental, special, consequential, or exemplary damages arising from:<br><br>
+
+            1. Your use of this Website;<br>
+            2. Your breach of the Terms of Use, this Disclaimer, or any applicable policies;<br>
+            3. Any other matter relating to your access to or use of this Website.<br><br>
+
+            Any business transactions that may occur between users or members as a result of their use of this Website are the sole responsibility of the parties involved. VINDRU bears no liability in connection with such interactions.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Warranty Disclaimer and Limitation of Liability</summary>
+        <div class="legal-panel">
+          <p>
+            The information on this Website is provided by VINDRU on an “as is” basis, without warranties of any kind, express or implied. VINDRU expressly disclaims all warranties, including but not limited to, warranties of design, merchantability, fitness for a particular purpose, non-infringement, or any warranty arising from a course of dealing, usage, or trade practice.<br><br>
+
+            Under no circumstances shall VINDRU be liable for any incidental, consequential, indirect, special, or exemplary damages arising out of or in connection with the use of this Website.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Governing Law and Jurisdiction</summary>
+        <div class="legal-panel">
+          <p>
+            By accessing this Website, you agree that all matters arising out of or relating to this Website shall be governed by the laws of the Republic of India. You also agree to submit to the exclusive jurisdiction of the courts located in Coimbatore, Tamil Nadu.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>General</summary>
+        <div class="legal-panel">
+          <p>
+            VINDRU, its marks, logos, and other related names and logos are trademarks of VINDRU. You acknowledge and agree not to display, use, or reproduce these trademarks without prior written consent.<br><br>
+
+            For any questions or comments, please contact: accounts@vindru.com.
+          </p>
+        </div>
+      </details>
+
+    </div>
+
+    
+
+  </div>
+</section>
+
+ <!-- CONTACT -->
+ <section class="contact-section">
+  <div class="container contact-grid">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-left">
+      <h3>“Victory in Drilling, For You.”</h3>
+      <p>
+        Your success is our purpose — every tool, every system,
+        every solution we engineer.
+      </p>
+
+      <div class="contact-socials">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="X">x</a>
+        <a href="#" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-right">
+      <h2>Contact Us</h2>
+      
+
+      <ul class="contact-details">
+        <li>
+          <span>Email</span>
+          <a href="mailto:sales@vindru.com">sales@vindru.com</a>
+        </li>
+        <li>
+          <span>Call Us</span>
+          <a href="tel:+919446632422">+91 94466 32422</a>
+        </li>
+        <li>
+          <span>Location</span>
+          <p>Coimbatore, Tamil Nadu, India</p>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<script>const revealElements = document.querySelectorAll(
+  ".reveal-up, .reveal-left, .reveal-right, .reveal-scale"
+);
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealElements.forEach(el => observer.observe(el));</script>
+
+<script>
+const toggle = document.getElementById("menuToggle");
+const overlay = document.getElementById("menuOverlay");
+
+toggle.addEventListener("click", () => {
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  overlay.classList.remove("active");
+});
+</script>
+
+
+</body>
+</html>
